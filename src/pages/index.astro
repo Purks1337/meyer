@@ -6,7 +6,7 @@ import '../styles/global.css';
 <html lang="ru" class="scroll-smooth">
 <head>
   <meta charset="utf-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="/favicon-green.svg" />
   <link rel="icon" href="/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="generator" content={Astro.generator} />
@@ -29,35 +29,30 @@ import '../styles/global.css';
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <!-- Логотип и дескриптор -->
-      <div class="flex items-center gap-3">
-        <a href="#" class="flex items-center gap-2 group">
-          <div class="w-10 h-10 rounded-xl bg-[#007457] flex items-center justify-center shadow-md shadow-[#007457]/20 transition-transform group-hover:scale-105">
-            <span class="text-white font-extrabold text-2xl tracking-tighter">M</span>
-          </div>
-          <div class="flex flex-col">
-            <span class="text-2xl font-bold text-slate-900 tracking-tight leading-none">Meyer</span>
-            <span class="text-[10px] text-slate-500 font-semibold tracking-wider uppercase mt-1">Официальное представительство в РФ</span>
-          </div>
+      <div class="flex-shrink-0">
+        <a href="#" class="flex flex-col items-start group">
+          <img src="/logo.svg" alt="Meyer" class="h-8 sm:h-9 w-auto transition-transform group-hover:scale-[1.02]" />
+          <span class="text-[8px] sm:text-[9px] text-slate-400 font-semibold tracking-wider uppercase leading-none mt-1.5 whitespace-nowrap">Официальный дистрибьютор в РФ</span>
         </a>
       </div>
 
       <!-- Меню навигации -->
-      <nav class="hidden lg:flex items-center gap-8">
-        <a href="#advantages" class="text-sm font-medium text-slate-600 hover:text-[#007457] transition-colors duration-200">Преимущества</a>
-        <a href="#software" class="text-sm font-medium text-slate-600 hover:text-[#007457] transition-colors duration-200">MyDentViewer</a>
-        <a href="#specs" class="text-sm font-medium text-slate-600 hover:text-[#007457] transition-colors duration-200">Технические параметры</a>
-        <a href="#faq" class="text-sm font-medium text-slate-600 hover:text-[#007457] transition-colors duration-200">Вопрос-ответ</a>
+      <nav class="hidden lg:flex items-center gap-6 xl:gap-8">
+        <a href="#advantages" class="text-sm font-medium text-slate-600 hover:text-[#007457] transition-colors duration-200 whitespace-nowrap">Преимущества</a>
+        <a href="#software" class="text-sm font-medium text-slate-600 hover:text-[#007457] transition-colors duration-200 whitespace-nowrap">MyDentViewer</a>
+        <a href="#specs" class="text-sm font-medium text-slate-600 hover:text-[#007457] transition-colors duration-200 whitespace-nowrap">Характеристики</a>
+        <a href="#faq" class="text-sm font-medium text-slate-600 hover:text-[#007457] transition-colors duration-200 whitespace-nowrap">FAQ</a>
       </nav>
 
       <!-- Контакты и CTA -->
-      <div class="flex items-center gap-4 sm:gap-6">
-        <a href="tel:+79090272037" class="flex items-center gap-2 text-sm sm:text-base font-semibold text-slate-900 hover:text-[#007457] transition-colors">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#007457]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+      <div class="flex items-center gap-4 sm:gap-6 flex-shrink-0">
+        <a href="tel:+79090272037" class="flex items-center gap-2 text-sm sm:text-base font-semibold text-slate-900 hover:text-[#007457] transition-colors whitespace-nowrap">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#007457] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
           </svg>
           <span class="hidden sm:inline">+7 (909) 027-20-37</span>
         </a>
-        <a href="#consultation" class="bg-[#007457] hover:bg-[#005a43] text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-300 shadow-md shadow-[#007457]/10 hover:shadow-lg hover:shadow-[#007457]/20 active:scale-95">
+        <a href="#consultation" class="bg-[#007457] hover:bg-[#005a43] text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-300 shadow-md shadow-[#007457]/10 hover:shadow-lg hover:shadow-[#007457]/20 active:scale-95 whitespace-nowrap">
           Нужна консультация
         </a>
       </div>
@@ -73,15 +68,15 @@ import '../styles/global.css';
     <div class="absolute bottom-10 right-0 w-[500px] h-[500px] bg-[#007457]/5 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-[#007457]/10 text-[#007457] mb-6">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#007457] animate-pulse"></span>
+        Стоматологическое 3D-оборудование
+      </span>
+
+      <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center lg:items-stretch">
         
         <!-- Текстовый контент (слева) -->
         <div class="lg:col-span-7 flex flex-col items-start">
-          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-[#007457]/10 text-[#007457] mb-6">
-            <span class="w-1.5 h-1.5 rounded-full bg-[#007457] animate-pulse"></span>
-            Стоматологическое 3D-оборудование
-          </span>
-
           <h1 class="text-4xl sm:text-5xl lg:text-[56px] font-bold text-slate-900 tracking-tight leading-[1.1] mb-6">
             Стоматологические 3D-томографы <span class="text-[#007457]">Meyer</span>
           </h1>
@@ -133,13 +128,13 @@ import '../styles/global.css';
         </div>
 
         <!-- Изображение и Рендер (справа) -->
-        <div class="lg:col-span-5 relative flex justify-center">
-          <div class="relative w-full max-w-md lg:max-w-none aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border border-slate-100 bg-white p-6 flex flex-col justify-between items-center group">
+        <div class="lg:col-span-5 relative flex justify-center lg:items-stretch">
+          <div class="relative w-full max-w-md lg:max-w-none aspect-[4/5] lg:aspect-auto lg:h-full rounded-3xl overflow-hidden shadow-2xl border border-slate-100 bg-white p-6 flex flex-col justify-end items-center group">
             <div class="absolute inset-0 bg-radial-gradient from-transparent to-[#007457]/5 pointer-events-none"></div>
-            <!-- Картинка-плейсхолдер для томографа -->
-            <img src="https://placehold.co/500x600/ffffff/007457?text=Meyer+3D+Tomograph+Render" class="w-full h-auto object-contain max-h-[80%] rounded-2xl mix-blend-multiply transition-transform duration-700 group-hover:scale-105" alt="3D-рендер томографа Meyer" />
+            <!-- Картинка томографа без фона -->
+            <img src="/3d-tamograf.png" class="absolute inset-0 w-full h-full object-contain p-6 pb-28 transition-transform duration-700 group-hover:scale-105" alt="3D-томограф Meyer" />
             <!-- Информационный блок/плашка гарантии -->
-            <div class="w-full bg-[#007457] text-white p-4 rounded-xl flex items-center justify-between shadow-lg shadow-[#007457]/20">
+            <div class="w-full bg-[#007457]/95 backdrop-blur-sm text-white p-4 rounded-xl flex items-center justify-between shadow-lg shadow-[#007457]/20 z-10">
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center">
                   <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -182,25 +177,36 @@ import '../styles/global.css';
         </div>
       </div>
 
-      <div class="grid lg:grid-cols-12 gap-8 items-start mb-16">
-        <!-- Ключевая особенность (слева) -->
-        <div class="lg:col-span-5 bg-slate-50 rounded-3xl p-8 border border-slate-100/60 shadow-sm flex flex-col justify-between h-full">
-          <div>
-            <span class="text-xs font-bold text-[#007457] uppercase tracking-wider mb-2 block">Уникальное позиционирование</span>
-            <h3 class="text-2xl font-bold text-slate-900 mb-4">5-точечная система фиксации пациента</h3>
-            <p class="text-slate-600 leading-relaxed mb-6 font-light">
-              Жесткая, но комфортная фиксация головы исключает случайные микродвижения во время сканирования. Больше никаких смазанных кадров и повторных облучений из-за двигательных артефактов.
-            </p>
-          </div>
-          <div class="rounded-2xl overflow-hidden border border-slate-100 bg-white p-4 shadow-inner">
-            <img src="https://placehold.co/500x350/f8fafc/007457?text=5-point+Fixation+Detail" class="w-full h-auto object-cover rounded-xl" alt="Система позиционирования головы пациента" />
+      <!-- Уникальное позиционирование (широкая верхняя карточка) -->
+      <div class="bg-gradient-to-br from-slate-50 to-emerald-50/30 rounded-3xl p-6 sm:p-8 border border-slate-100/60 shadow-sm flex flex-col md:flex-row items-center gap-8 mb-8">
+        <div class="md:w-3/5">
+          <span class="text-xs font-bold text-[#007457] uppercase tracking-wider mb-2 block">Уникальное позиционирование</span>
+          <h3 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">5-точечная система фиксации пациента</h3>
+          <p class="text-slate-600 leading-relaxed mb-6 font-light">
+            Жесткая, но комфортная фиксация головы исключает случайные микродвижения во время сканирования. Больше никаких смазанных кадров и повторных облучений из-за двигательных артефактов.
+          </p>
+          <div class="flex flex-wrap gap-3 text-xs font-semibold text-slate-500">
+            <span class="bg-white/80 backdrop-blur-sm border border-slate-200/60 px-3 py-1.5 rounded-lg flex items-center gap-1.5">
+              <span class="text-[#007457] font-bold">✓</span> Исключает смазанные кадры
+            </span>
+            <span class="bg-white/80 backdrop-blur-sm border border-slate-200/60 px-3 py-1.5 rounded-lg flex items-center gap-1.5">
+              <span class="text-[#007457] font-bold">✓</span> Безопасно и гигиенично
+            </span>
+            <span class="bg-white/80 backdrop-blur-sm border border-slate-200/60 px-3 py-1.5 rounded-lg flex items-center gap-1.5">
+              <span class="text-[#007457] font-bold">✓</span> Повышенная точность КЛКТ
+            </span>
           </div>
         </div>
+        <div class="md:w-2/5 w-full rounded-2xl overflow-hidden bg-white p-3 border border-slate-100 shadow-sm">
+          <img src="/positioning.png" class="w-full h-auto object-cover rounded-xl" alt="Система позиционирования головы пациента" />
+        </div>
+      </div>
 
-        <!-- Сетка преимуществ (справа) -->
-        <div class="lg:col-span-7 grid sm:grid-cols-2 gap-6">
-          <!-- Карточка 1 -->
-          <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 group">
+      <!-- Сетка преимуществ 2x2 (снизу) -->
+      <div class="grid lg:grid-cols-2 gap-6 mb-16">
+        <!-- Карточка 1 -->
+        <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col sm:flex-row gap-6 sm:items-start items-center">
+          <div class="flex-1">
             <div class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center mb-5 transition-colors group-hover:bg-[#007457]/10">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#007457]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
@@ -210,13 +216,15 @@ import '../styles/global.css';
             <p class="text-sm text-slate-500 leading-relaxed font-light">
               Универсальные режимы под любые клинические задачи: от эндодонтии до имплантации (12x10 см, 15x10,5 см, 16x10 см, 17x11 см).
             </p>
-            <div class="mt-4 pt-4 border-t border-slate-50">
-              <img src="https://placehold.co/400x120/ffffff/007457?text=FOV+Zones+12x10+...+17x11" class="w-full h-auto object-contain rounded-lg" alt="Зоны сканирования FOV" />
-            </div>
           </div>
+          <div class="w-full sm:w-1/3 flex-shrink-0 flex justify-center">
+            <img src="/fov.webp" class="h-32 sm:h-36 w-auto object-contain rounded-lg" alt="Зоны сканирования FOV" />
+          </div>
+        </div>
 
-          <!-- Карточка 2 -->
-          <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 group">
+        <!-- Карточка 2 -->
+        <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col sm:flex-row gap-6 sm:items-start items-center">
+          <div class="flex-1">
             <div class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center mb-5 transition-colors group-hover:bg-[#007457]/10">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#007457]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 8H17" />
@@ -226,13 +234,15 @@ import '../styles/global.css';
             <p class="text-sm text-slate-500 leading-relaxed font-light">
               Круговой алгоритм сканирования собирает максимум данных, эффективно подавляя теневые искажения и гарантируя кристально чистую картинку.
             </p>
-            <div class="mt-4 pt-4 border-t border-slate-50">
-              <img src="https://placehold.co/400x120/ffffff/007457?text=360+Rotation+Algorithm" class="w-full h-auto object-contain rounded-lg" alt="Движение излучателя на 360" />
-            </div>
           </div>
+          <div class="w-full sm:w-1/3 flex-shrink-0 flex justify-center">
+            <img src="/360.png" class="h-32 sm:h-36 w-auto object-contain rounded-lg" alt="Движение излучателя на 360" />
+          </div>
+        </div>
 
-          <!-- Карточка 3 -->
-          <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 group">
+        <!-- Карточка 3 -->
+        <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col sm:flex-row gap-6 sm:items-start items-center">
+          <div class="flex-1">
             <div class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center mb-5 transition-colors group-hover:bg-[#007457]/10">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#007457]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -242,13 +252,15 @@ import '../styles/global.css';
             <p class="text-sm text-slate-500 leading-relaxed font-light">
               Аппарат готов к интенсивному потоку пациентов. Снимайте без длительных пауз на перегрев рентгеновского излучателя.
             </p>
-            <div class="mt-4 pt-4 border-t border-slate-50">
-              <img src="https://placehold.co/400x120/ffffff/007457?text=Smart+Cooling+Sensor" class="w-full h-auto object-contain rounded-lg" alt="Интеллектуальное охлаждение" />
-            </div>
           </div>
+          <div class="w-full sm:w-1/3 flex-shrink-0 flex justify-center">
+            <img src="/cooling.webp" class="h-32 sm:h-36 w-auto object-contain rounded-lg" alt="Интеллектуальное охлаждение" />
+          </div>
+        </div>
 
-          <!-- Карточка 4 -->
-          <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 group">
+        <!-- Карточка 4 -->
+        <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col sm:flex-row gap-6 sm:items-start items-center">
+          <div class="flex-1">
             <div class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center mb-5 transition-colors group-hover:bg-[#007457]/10">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#007457]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -258,9 +270,9 @@ import '../styles/global.css';
             <p class="text-sm text-slate-500 leading-relaxed font-light">
               Быстрая настройка параметров прямо на аппарате через интуитивно понятный сенсорный интерфейс.
             </p>
-            <div class="mt-4 pt-4 border-t border-slate-50">
-              <img src="https://placehold.co/400x120/ffffff/007457?text=Touchscreen+Interface" class="w-full h-auto object-contain rounded-lg" alt="Дисплей на аппарате" />
-            </div>
+          </div>
+          <div class="w-full sm:w-1/3 flex-shrink-0 flex justify-center">
+            <img src="/screen.webp" class="h-32 sm:h-36 w-auto object-contain rounded-lg" alt="Дисплей на аппарате" />
           </div>
         </div>
       </div>
@@ -268,7 +280,7 @@ import '../styles/global.css';
       <!-- Дополнительное преимущество: Цефалостат (широкая карточка внизу) -->
       <div class="bg-slate-50 rounded-3xl p-6 sm:p-10 border border-slate-100 shadow-sm flex flex-col md:flex-row items-center gap-8">
         <div class="md:w-1/3 rounded-2xl overflow-hidden bg-white p-4 border border-slate-100">
-          <img src="https://placehold.co/400x300/f8fafc/007457?text=Cephalostat+Arm" class="w-full h-auto object-cover rounded-xl" alt="Модуль цефалометрии" />
+          <img src="/ceph.png" class="w-full h-auto object-cover rounded-xl" alt="Модуль цефалометрии" />
         </div>
         <div class="md:w-2/3">
           <span class="text-xs font-bold text-[#007457] uppercase tracking-wider mb-2 block">Ортодонтическое расширение</span>
@@ -306,10 +318,10 @@ import '../styles/global.css';
         <div class="lg:col-span-7 flex flex-col items-center">
           <div class="w-full max-w-xl relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-slate-700 bg-slate-800 select-none">
             <!-- Original (Before) -->
-            <img src="https://placehold.co/800x600/1e293b/475569?text=Original+Scan+(Noisy+Grainy)" class="absolute inset-0 w-full h-full object-cover" alt="Before AI" />
+            <img src="/original-scan.jpg" class="absolute inset-0 w-full h-full object-cover" alt="Before AI" />
             
             <!-- Processed (After) -->
-            <img src="https://placehold.co/800x600/0f172a/007457?text=Meyer+ANR+Algorithm+(Ultra+Clean+Detail)" class="absolute inset-0 w-full h-full object-cover" id="after-image" style="clip-path: inset(0 0 0 50%);" alt="After AI" />
+            <img src="/meyer-anr-scan.jpg" class="absolute inset-0 w-full h-full object-cover" id="after-image" style="clip-path: inset(0 0 0 50%);" alt="After AI" />
 
             <!-- Range Input overlay -->
             <input type="range" min="0" max="100" value="50" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20" id="comparison-slider" aria-label="Сравнение работы ИИ" />
@@ -378,14 +390,14 @@ import '../styles/global.css';
   <section class="py-24 bg-slate-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="grid lg:grid-cols-12 gap-12 items-center mb-16">
+      <div class="grid lg:grid-cols-12 gap-12 items-center lg:items-stretch mb-16">
         <!-- Секция автофокусировки (слева) -->
-        <div class="lg:col-span-6">
+        <div class="lg:col-span-6 flex flex-col">
           <span class="text-xs font-bold text-[#007457] uppercase tracking-wider mb-2 block">Панорамная визуализация (ОПТГ)</span>
           <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight leading-tight mb-6">
             Многослойные панорамные снимки (ОПТГ) с умной фокусировкой
           </h2>
-          <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mb-6">
+          <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex-1 flex flex-col justify-center">
             <h3 class="text-lg font-bold text-slate-900 mb-3">Умная автофокусировка</h3>
             <p class="text-slate-600 leading-relaxed font-light">
               Аппарат выполняет многослойное сканирование челюсти, после чего искусственный интеллект самостоятельно определяет оптимальную фокусную плоскость и «склеивает» идеальную, резкую панораму без участия оператора.
@@ -394,9 +406,9 @@ import '../styles/global.css';
         </div>
 
         <!-- Изображение панорамного снимка (справа) -->
-        <div class="lg:col-span-6">
-          <div class="bg-white p-4 rounded-2xl shadow-md border border-slate-100 relative group overflow-hidden">
-            <img src="https://placehold.co/600x350/1e293b/ffffff?text=Dental+Panoramic+Scan+(OPTG)+with+Focus+Line" class="w-full h-auto object-cover rounded-xl transition-transform duration-500 group-hover:scale-[1.02]" alt="Панорамный снимок челюсти" />
+        <div class="lg:col-span-6 flex">
+          <div class="bg-white p-4 rounded-2xl shadow-md border border-slate-100 relative group overflow-hidden w-full min-h-[300px] lg:min-h-0 flex flex-col">
+            <img src="/optg.jpg" class="w-full h-full flex-1 object-cover rounded-xl transition-transform duration-500 group-hover:scale-[1.02]" alt="Панорамный снимок челюсти" />
             <!-- Зеленая рамка подсветки автофокуса -->
             <div class="absolute inset-4 border border-[#007457] rounded-lg pointer-events-none opacity-40 animate-pulse"></div>
             <div class="absolute bottom-6 left-6 bg-[#007457]/90 text-white text-[11px] font-bold px-3 py-1.5 rounded-md uppercase tracking-wider">
@@ -459,7 +471,7 @@ import '../styles/global.css';
             </p>
           </div>
           <div class="rounded-2xl overflow-hidden border border-slate-200 bg-white">
-            <img src="https://placehold.co/550x300/f8fafc/007457?text=Cephalometric+(TRG)+Scan+Preview" class="w-full h-auto object-cover" alt="ТРГ снимок головы" />
+            <img src="/ceph-model.png" class="w-full h-auto object-cover" alt="ТРГ снимок головы" />
           </div>
         </div>
 
@@ -473,7 +485,7 @@ import '../styles/global.css';
             </p>
           </div>
           <div class="rounded-2xl overflow-hidden border border-slate-200 bg-white">
-            <img src="https://placehold.co/550x300/f8fafc/007457?text=Plaster+Model+3D+Scanning" class="w-full h-auto object-cover" alt="3D-сканирование гипсовых моделей" />
+            <img src="/3d-scan.png" class="w-full h-auto object-cover" alt="3D-сканирование гипсовых моделей" />
           </div>
         </div>
       </div>
@@ -1035,7 +1047,7 @@ import '../styles/global.css';
           <!-- Левая сторона (изображение) -->
           <div class="lg:col-span-5 flex justify-center">
             <div class="relative w-full max-w-sm aspect-square bg-slate-900/50 rounded-2xl border border-slate-700/50 p-6 flex items-center justify-center">
-              <img src="https://placehold.co/400x400/0f172a/007457?text=Meyer+Tomograph+Premium+Dark" class="w-full h-auto object-contain max-h-[90%] rounded-xl" alt="Томограф Meyer на темном фоне" />
+              <img src="/tomograf.jpg" class="w-full h-auto object-contain max-h-[90%] rounded-xl" alt="Томограф Meyer на темном фоне" />
               <div class="absolute -top-4 -right-4 bg-[#007457] text-white text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
                 Спеццена в РФ
               </div>
@@ -1076,57 +1088,6 @@ import '../styles/global.css';
     </div>
   </section>
 
-  <!-- ========================================================================= -->
-  <!-- БЛОК 11: КРОСС-СЕЙЛ (Смотрите также)                                       -->
-  <!-- ========================================================================= -->
-  <section class="py-24 bg-white border-b border-slate-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-xs font-bold text-[#007457] uppercase tracking-wider mb-2 block">Сопутствующее оборудование</span>
-        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
-          Решения для комплексной цифровизации клиники
-        </h2>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        <!-- Товар 1 -->
-        <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-shadow group flex flex-col justify-between">
-          <div>
-            <div class="rounded-xl overflow-hidden bg-white border border-slate-150 p-4 mb-6 relative">
-              <img src="https://placehold.co/400x300/ffffff/007457?text=Meyer+Intraoral+3D+Scanner" class="w-full h-48 object-contain rounded-lg transition-transform duration-500 group-hover:scale-105" alt="Интраоральный 3D-сканер" />
-              <span class="absolute top-4 left-4 bg-emerald-100 text-[#007457] text-[10px] font-bold px-2 py-1 rounded">Хит продаж</span>
-            </div>
-            <h3 class="text-lg font-bold text-slate-900 mb-2">Интраоральный 3D-сканер Meyer</h3>
-            <p class="text-sm text-slate-500 font-light leading-relaxed mb-6">
-              Высокоточный беспроводной сканер для быстрого получения цифровых слепков. Идеальная интеграция с ПО MyDentViewer для ортопедии и хирургии.
-            </p>
-          </div>
-          <a href="#consultation" class="border border-[#007457] text-[#007457] hover:bg-[#007457] hover:text-white text-center py-2.5 rounded-lg text-sm font-semibold transition-all duration-300">
-            Узнать подробнее
-          </a>
-        </div>
-
-        <!-- Товар 2 -->
-        <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-shadow group flex flex-col justify-between">
-          <div>
-            <div class="rounded-xl overflow-hidden bg-white border border-slate-150 p-4 mb-6 relative">
-              <img src="https://placehold.co/400x300/ffffff/007457?text=Meyer+Dental+3D+Printer" class="w-full h-48 object-contain rounded-lg transition-transform duration-500 group-hover:scale-105" alt="Стоматологический 3D-принтер" />
-              <span class="absolute top-4 left-4 bg-emerald-100 text-[#007457] text-[10px] font-bold px-2 py-1 rounded">Рекомендовано</span>
-            </div>
-            <h3 class="text-lg font-bold text-slate-900 mb-2">Стоматологический 3D-принтер Meyer</h3>
-            <p class="text-sm text-slate-500 font-light leading-relaxed mb-6">
-              Лабораторный принтер для быстрой 3D-печати хирургических шаблонов, временных коронок, кап и диагностических моделей непосредственно в клинике.
-            </p>
-          </div>
-          <a href="#consultation" class="border border-[#007457] text-[#007457] hover:bg-[#007457] hover:text-white text-center py-2.5 rounded-lg text-sm font-semibold transition-all duration-300">
-            Узнать подробнее
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </section>
 
   <!-- ========================================================================= -->
   <!-- БЛОК 12: ФОРМА КОНСУЛЬТАЦИИ (Светлый фон)                                 -->
@@ -1142,21 +1103,9 @@ import '../styles/global.css';
             <h2 class="text-3xl font-bold text-slate-900 tracking-tight leading-tight mb-6">
               Остались вопросы?
             </h2>
-            <p class="text-slate-600 font-light leading-relaxed mb-8">
+            <p class="text-slate-600 font-light leading-relaxed mb-0">
               Наши эксперты готовы ответить на любые вопросы по техническим характеристикам, лицензированию кабинета и условиям расширенной гарантии.
             </p>
-
-            <!-- Фото эксперта -->
-            <div class="flex items-center gap-4 bg-slate-50 p-4 rounded-2xl border border-slate-100 w-full">
-              <img src="https://placehold.co/100x100/e2e8f0/007457?text=Expert" class="w-16 h-16 rounded-full object-cover border-2 border-white shadow-sm flex-shrink-0" alt="Специалист представительства Meyer" />
-              <div class="text-left">
-                <h4 class="text-sm font-bold text-slate-900 leading-tight">Александр Волков</h4>
-                <p class="text-xs text-slate-500 font-medium mt-0.5">Ведущий инженер представительства</p>
-                <span class="inline-flex items-center text-[10px] text-emerald-700 font-bold bg-emerald-100/50 px-2 py-0.5 rounded mt-1.5">
-                  В сети
-                </span>
-              </div>
-            </div>
           </div>
 
           <!-- Форма (справа) -->
@@ -1204,10 +1153,7 @@ import '../styles/global.css';
         <!-- Описание и контакты (слева) -->
         <div class="lg:col-span-4 flex flex-col gap-4">
           <div class="flex items-center gap-2">
-            <div class="w-8 h-8 rounded-lg bg-[#007457] flex items-center justify-center">
-              <span class="text-white font-black text-lg tracking-tighter">M</span>
-            </div>
-            <span class="text-xl font-bold text-white tracking-tight">Meyer</span>
+            <img src="/logo-white.svg" alt="Meyer" class="h-8 w-auto" />
           </div>
           <p class="text-sm text-slate-400 leading-relaxed font-light">
             Официальное представительство стоматологического рентгеновского оборудования Meyer в Российской Федерации.
