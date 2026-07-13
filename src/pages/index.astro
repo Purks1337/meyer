@@ -6,8 +6,8 @@ import "../styles/global.css";
 <html lang="ru" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="./favicon-green.svg" />
-    <link rel="icon" href="./favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/meyer/favicon-green.svg" />
+    <link rel="icon" href="/meyer/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
 
@@ -46,13 +46,13 @@ import "../styles/global.css";
         <div class="flex-shrink-0">
           <a href="#" class="flex flex-col items-start group">
             <img
-              src="./logo.svg"
+              src="/meyer/logo.svg"
               alt="Meyer"
               class="h-8 sm:h-9 w-auto transition-transform group-hover:scale-[1.02]"
             />
             <span
               class="text-[8px] sm:text-[9px] text-slate-400 font-semibold tracking-wider uppercase leading-none mt-1.5 whitespace-nowrap"
-              >Официальный дистрибьютор в РФ</span
+              >Официальный представитель в РФ</span
             >
           </a>
         </div>
@@ -224,8 +224,7 @@ import "../styles/global.css";
                 <li class="flex items-start gap-2.5 text-sm text-slate-700">
                   <span class="text-[#007457] mt-0.5 font-bold">✓</span>
                   <span
-                    ><strong>Бесплатная доставка:</strong> до терминала ТК в вашем
-                    городе.</span
+                    ><strong>Бесплатная доставка</strong></span
                   >
                 </li>
                 <li
@@ -253,7 +252,7 @@ import "../styles/global.css";
               </div>
               <!-- Картинка томографа без фона -->
               <img
-                src="./3d-tamograf.png"
+                src="/meyer/3d-tamograf.png"
                 class="absolute inset-0 w-full h-full object-contain p-6 pb-28 transition-transform duration-700 group-hover:scale-105"
                 alt="3D-томограф Meyer"
               />
@@ -289,10 +288,28 @@ import "../styles/global.css";
                     <div class="text-sm font-bold">4 года полной гарантии</div>
                   </div>
                 </div>
-                <div
-                  class="text-xs bg-white/20 px-3 py-1 rounded-full font-semibold"
-                >
-                  Сертифицировано
+                <div class="relative group/cert">
+                  <div
+                    class="text-xs bg-white/20 px-3 py-1 rounded-full font-semibold cursor-help transition-colors hover:bg-white/30"
+                  >
+                    Сертифицировано
+                  </div>
+                  <!-- Всплывающее Регистрационное удостоверение при наведении -->
+                  <div class="absolute bottom-full right-0 mb-3 hidden group-hover/cert:block z-50 bg-white p-2.5 rounded-2xl shadow-2xl border border-slate-100 w-64 pointer-events-none select-none">
+                    <div class="relative w-full h-auto">
+                      <img
+                        src="/meyer/registration-certificate.jpg"
+                        alt="Регистрационное удостоверение"
+                        class="w-full h-auto rounded-xl border border-slate-100 select-none pointer-events-none"
+                        draggable="false"
+                      />
+                      <!-- Прозрачный оверлей для блокировки правого клика / сохранения -->
+                      <div class="absolute inset-0 bg-transparent pointer-events-auto"></div>
+                    </div>
+                    <div class="text-[10px] text-slate-400 text-center mt-2 font-medium">
+                      Регистрационное удостоверение
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -322,58 +339,8 @@ import "../styles/global.css";
           </div>
         </div>
 
-        <!-- Уникальное позиционирование (широкая верхняя карточка) -->
-        <div
-          class="bg-gradient-to-br from-slate-50 to-emerald-50/30 rounded-3xl p-6 sm:p-8 border border-slate-100/60 shadow-sm flex flex-col md:flex-row items-center gap-8 mb-8"
-        >
-          <div class="md:w-3/5">
-            <span
-              class="text-xs font-bold text-[#007457] uppercase tracking-wider mb-2 block"
-              >Уникальное позиционирование</span
-            >
-            <h3 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">
-              5-точечная система фиксации пациента
-            </h3>
-            <p class="text-slate-600 leading-relaxed mb-6 font-light">
-              Жесткая, но комфортная фиксация головы исключает случайные
-              микродвижения во время сканирования. Больше никаких смазанных
-              кадров и повторных облучений из-за двигательных артефактов.
-            </p>
-            <div
-              class="flex flex-wrap gap-3 text-xs font-semibold text-slate-500"
-            >
-              <span
-                class="bg-white/80 backdrop-blur-sm border border-slate-200/60 px-3 py-1.5 rounded-lg flex items-center gap-1.5"
-              >
-                <span class="text-[#007457] font-bold">✓</span> Исключает смазанные
-                кадры
-              </span>
-              <span
-                class="bg-white/80 backdrop-blur-sm border border-slate-200/60 px-3 py-1.5 rounded-lg flex items-center gap-1.5"
-              >
-                <span class="text-[#007457] font-bold">✓</span> Безопасно и гигиенично
-              </span>
-              <span
-                class="bg-white/80 backdrop-blur-sm border border-slate-200/60 px-3 py-1.5 rounded-lg flex items-center gap-1.5"
-              >
-                <span class="text-[#007457] font-bold">✓</span> Повышенная точность
-                КЛКТ
-              </span>
-            </div>
-          </div>
-          <div
-            class="md:w-2/5 w-full rounded-2xl overflow-hidden bg-white p-3 border border-slate-100 shadow-sm"
-          >
-            <img
-              src="./positioning.png"
-              class="w-full h-auto object-cover rounded-xl"
-              alt="Система позиционирования головы пациента"
-            />
-          </div>
-        </div>
-
-        <!-- Сетка преимуществ 2x2 (снизу) -->
-        <div class="grid lg:grid-cols-2 gap-6 mb-16">
+        <!-- Сетка преимуществ 1x2 (снизу) -->
+        <div class="grid lg:grid-cols-2 gap-6">
           <!-- Карточка 1 -->
           <div
             class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col sm:flex-row gap-6 sm:items-start items-center"
@@ -393,21 +360,37 @@ import "../styles/global.css";
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+                    d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l-5-5m11 5l-5-5m5 5v-4m0 4h-4"
                   ></path>
                 </svg>
               </div>
               <h4 class="text-lg font-bold text-slate-900 mb-2">
                 Широкий выбор зон сканирования (FOV)
               </h4>
-              <p class="text-sm text-slate-500 leading-relaxed font-light">
-                Универсальные режимы под любые клинические задачи: от эндодонтии
-                до имплантации (12x10 см, 15x10,5 см, 16x10 см, 17x11 см).
+              <p class="text-sm text-slate-500 leading-relaxed font-light mb-4">
+                Универсальные режимы под любые клинические задачи: от эндодонтии до имплантации.
               </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="inline-flex items-center gap-1 bg-emerald-50/50 text-[#007457] border border-emerald-100 text-xs font-semibold px-2.5 py-1 rounded-md shadow-sm">
+                  🚩 12x10 см
+                </span>
+                <span class="inline-flex items-center gap-1 bg-emerald-50/50 text-[#007457] border border-emerald-100 text-xs font-semibold px-2.5 py-1 rounded-md shadow-sm">
+                  🚩 13x10 см
+                </span>
+                <span class="inline-flex items-center gap-1 bg-emerald-50/50 text-[#007457] border border-emerald-100 text-xs font-semibold px-2.5 py-1 rounded-md shadow-sm">
+                  🚩 15x10,5 см
+                </span>
+                <span class="inline-flex items-center gap-1 bg-emerald-50/50 text-[#007457] border border-emerald-100 text-xs font-semibold px-2.5 py-1 rounded-md shadow-sm">
+                  🚩 16x10 см
+                </span>
+                <span class="inline-flex items-center gap-1 bg-emerald-50/50 text-[#007457] border border-emerald-100 text-xs font-semibold px-2.5 py-1 rounded-md shadow-sm">
+                  🚩 17x11 см
+                </span>
+              </div>
             </div>
             <div class="w-full sm:w-1/3 flex-shrink-0 flex justify-center">
               <img
-                src="./fov.webp"
+                src="/meyer/fov.webp"
                 class="h-32 sm:h-36 w-auto object-contain rounded-lg"
                 alt="Зоны сканирования FOV"
               />
@@ -433,47 +416,8 @@ import "../styles/global.css";
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 8H17"></path>
-                </svg>
-              </div>
-              <h4 class="text-lg font-bold text-slate-900 mb-2">
-                Охват на 360 градусов
-              </h4>
-              <p class="text-sm text-slate-500 leading-relaxed font-light">
-                Круговой алгоритм сканирования собирает максимум данных,
-                эффективно подавляя теневые искажения и гарантируя кристально
-                чистую картинку.
-              </p>
-            </div>
-            <div class="w-full sm:w-1/3 flex-shrink-0 flex justify-center">
-              <img
-                src="./360.png"
-                class="h-32 sm:h-36 w-auto object-contain rounded-lg"
-                alt="Движение излучателя на 360"
-              />
-            </div>
-          </div>
-
-          <!-- Карточка 3 -->
-          <div
-            class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col sm:flex-row gap-6 sm:items-start items-center"
-          >
-            <div class="flex-1">
-              <div
-                class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center mb-5 transition-colors group-hover:bg-[#007457]/10"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-6 h-6 text-[#007457]"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  ></path>
                 </svg>
               </div>
               <h4 class="text-lg font-bold text-slate-900 mb-2">
@@ -486,95 +430,10 @@ import "../styles/global.css";
             </div>
             <div class="w-full sm:w-1/3 flex-shrink-0 flex justify-center">
               <img
-                src="./cooling.webp"
+                src="/meyer/cooling.webp"
                 class="h-32 sm:h-36 w-auto object-contain rounded-lg"
                 alt="Интеллектуальное охлаждение"
               />
-            </div>
-          </div>
-
-          <!-- Карточка 4 -->
-          <div
-            class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col sm:flex-row gap-6 sm:items-start items-center"
-          >
-            <div class="flex-1">
-              <div
-                class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center mb-5 transition-colors group-hover:bg-[#007457]/10"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-6 h-6 text-[#007457]"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  ></path>
-                </svg>
-              </div>
-              <h4 class="text-lg font-bold text-slate-900 mb-2">
-                Интерактивный дисплей
-              </h4>
-              <p class="text-sm text-slate-500 leading-relaxed font-light">
-                Быстрая настройка параметров прямо на аппарате через интуитивно
-                понятный сенсорный интерфейс.
-              </p>
-            </div>
-            <div class="w-full sm:w-1/3 flex-shrink-0 flex justify-center">
-              <img
-                src="./screen.webp"
-                class="h-32 sm:h-36 w-auto object-contain rounded-lg"
-                alt="Дисплей на аппарате"
-              />
-            </div>
-          </div>
-        </div>
-
-        <!-- Дополнительное преимущество: Цефалостат (широкая карточка внизу) -->
-        <div
-          class="bg-slate-50 rounded-3xl p-6 sm:p-10 border border-slate-100 shadow-sm flex flex-col md:flex-row items-center gap-8"
-        >
-          <div
-            class="md:w-1/3 rounded-2xl overflow-hidden bg-white p-4 border border-slate-100"
-          >
-            <img
-              src="./ceph.png"
-              class="w-full h-auto object-cover rounded-xl"
-              alt="Модуль цефалометрии"
-            />
-          </div>
-          <div class="md:w-2/3">
-            <span
-              class="text-xs font-bold text-[#007457] uppercase tracking-wider mb-2 block"
-              >Ортодонтическое расширение</span
-            >
-            <h3 class="text-2xl font-bold text-slate-900 mb-4">
-              Модуль цефалометрии (Ceph)
-            </h3>
-            <p class="text-slate-600 leading-relaxed mb-4 font-light">
-              Опциональное плечо для создания высокоточных ТРГ-снимков —
-              незаменимый инструмент врача-ортодонта. Съемка выполняется за
-              минимальное время для предотвращения размытия из-за микродвижений.
-            </p>
-            <div
-              class="flex flex-wrap gap-4 text-xs font-semibold text-slate-500"
-            >
-              <span
-                class="bg-white border border-slate-200 px-3 py-1.5 rounded-lg"
-                >Высокоскоростная ТРГ-съемка</span
-              >
-              <span
-                class="bg-white border border-slate-200 px-3 py-1.5 rounded-lg"
-                >Минимальная лучевая нагрузка</span
-              >
-              <span
-                class="bg-white border border-slate-200 px-3 py-1.5 rounded-lg"
-                >Правое или левое расположение</span
-              >
             </div>
           </div>
         </div>
@@ -611,14 +470,14 @@ import "../styles/global.css";
             >
               <!-- Original (Before) -->
               <img
-                src="./original-scan.jpg"
+                src="/meyer/original-scan.jpg"
                 class="absolute inset-0 w-full h-full object-cover"
                 alt="Before AI"
               />
 
               <!-- Processed (After) -->
               <img
-                src="./meyer-anr-scan.jpg"
+                src="/meyer/meyer-anr-scan.jpg"
                 class="absolute inset-0 w-full h-full object-cover"
                 id="after-image"
                 style="clip-path: inset(0 0 0 50%);"
@@ -767,7 +626,7 @@ import "../styles/global.css";
               class="bg-white p-4 rounded-2xl shadow-md border border-slate-100 relative group overflow-hidden w-full min-h-[300px] lg:min-h-0 flex flex-col"
             >
               <img
-                src="./optg.jpg"
+                src="/meyer/optg.jpg"
                 class="w-full h-full flex-1 object-cover rounded-xl transition-transform duration-500 group-hover:scale-[1.02]"
                 alt="Панорамный снимок челюсти"
               />
@@ -881,7 +740,7 @@ import "../styles/global.css";
               class="rounded-2xl overflow-hidden border border-slate-200 bg-white"
             >
               <img
-                src="./ceph-model.png"
+                src="/meyer/ceph-model.png"
                 class="w-full h-auto object-cover"
                 alt="ТРГ снимок головы"
               />
@@ -911,7 +770,7 @@ import "../styles/global.css";
               class="rounded-2xl overflow-hidden border border-slate-200 bg-white"
             >
               <img
-                src="./3d-scan.png"
+                src="/meyer/3d-scan.png"
                 class="w-full h-auto object-cover"
                 alt="3D-сканирование гипсовых моделей"
               />
@@ -922,72 +781,91 @@ import "../styles/global.css";
         <!-- Специализированные режимы (2 плашки) -->
         <div class="grid sm:grid-cols-2 gap-6">
           <div
-            class="border border-slate-100 bg-white p-6 rounded-2xl shadow-sm flex items-start gap-4"
+            class="border border-slate-100 bg-white p-6 rounded-2xl shadow-sm flex flex-col justify-between gap-6 transition-all duration-300 hover:shadow-md"
           >
-            <div
-              class="w-12 h-12 rounded-xl bg-emerald-50 text-[#007457] flex items-center justify-center flex-shrink-0"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-6 h-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
+            <div class="flex items-start gap-4">
+              <div
+                class="w-12 h-12 rounded-xl bg-emerald-50 text-[#007457] flex items-center justify-center flex-shrink-0"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                ></path>
-              </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                  ></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-slate-900 mb-1">
+                  Скаут-снимок (Scout Mode)
+                </h4>
+                <p class="text-sm text-slate-500 font-light leading-relaxed">
+                  Быстрый предпросмотр для точного прицеливания и исключения
+                  ошибок позиционирования пациента до проведения основного
+                  сканирования.
+                </p>
+              </div>
             </div>
-            <div>
-              <h4 class="text-base font-bold text-slate-900 mb-1">
-                Скаут-снимок (Scout Mode)
-              </h4>
-              <p class="text-sm text-slate-500 font-light leading-relaxed">
-                Быстрый предпросмотр для точного прицеливания и исключения
-                ошибок позиционирования пациента до проведения основного
-                сканирования.
-              </p>
+            <div class="rounded-xl overflow-hidden border border-slate-100 bg-slate-50">
+              <img
+                src="/meyer/scout-capture.png"
+                class="w-full h-auto object-cover max-h-48 transition-transform duration-500 hover:scale-[1.02]"
+                alt="Скаут-снимок (Scout Mode)"
+              />
             </div>
           </div>
 
           <div
-            class="border border-slate-100 bg-white p-6 rounded-2xl shadow-sm flex items-start gap-4"
+            class="border border-slate-100 bg-white p-6 rounded-2xl shadow-sm flex flex-col justify-between gap-6 transition-all duration-300 hover:shadow-md"
           >
-            <div
-              class="w-12 h-12 rounded-xl bg-emerald-50 text-[#007457] flex items-center justify-center flex-shrink-0"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-6 h-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
+            <div class="flex items-start gap-4">
+              <div
+                class="w-12 h-12 rounded-xl bg-emerald-50 text-[#007457] flex items-center justify-center flex-shrink-0"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
-                ></path>
-              </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-slate-900 mb-1">
+                  Эндо-режим (Endo Mode)
+                </h4>
+                <p class="text-sm text-slate-500 font-light leading-relaxed">
+                  Локальная съемка зуба в сверхвысоком разрешении (размер вокселя
+                  до 70 мкм) для филигранной работы в самых узких и разветвленных
+                  корневых каналах.
+                </p>
+              </div>
             </div>
-            <div>
-              <h4 class="text-base font-bold text-slate-900 mb-1">
-                Эндо-режим (Endo Mode)
-              </h4>
-              <p class="text-sm text-slate-500 font-light leading-relaxed">
-                Локальная съемка зуба в сверхвысоком разрешении (размер вокселя
-                до 70 мкм) для филигранной работы в самых узких и разветвленных
-                корневых каналах.
-              </p>
+            <div class="rounded-xl overflow-hidden border border-slate-100 bg-slate-50">
+              <img
+                src="/meyer/endo-mode.webp"
+                class="w-full h-auto object-cover max-h-48 transition-transform duration-500 hover:scale-[1.02]"
+                alt="Эндо-режим (Endo Mode)"
+              />
             </div>
           </div>
         </div>
@@ -1012,11 +890,11 @@ import "../styles/global.css";
           </h2>
           <p class="text-slate-500 font-light mt-3">
             Мощное русифицированное программное обеспечение со встроенными
-            алгоритмами искусственного интеллекта.
+            алгоритмами <span class="inline-flex items-center gap-1 bg-violet-50 text-violet-700 border border-violet-100 px-2 py-0.5 rounded-md font-semibold text-sm whitespace-nowrap shadow-sm"><span class="animate-pulse">✨</span> искусственного интеллекта (ИИ)</span>.
           </p>
         </div>
 
-        <!-- Сетка из 12 карточек с ИИ-функциями ПО -->
+        <!-- Сетка из 12 карточек с ИИ-функциями ПО (Пункт 14) -->
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           <!-- Карточка 1 -->
           <div
@@ -1024,22 +902,13 @@ import "../styles/global.css";
           >
             <div>
               <div
-                class="w-10 h-10 rounded-lg bg-emerald-50 text-[#007457] flex items-center justify-center mb-4"
+                class="w-12 h-12 rounded-xl overflow-hidden border border-slate-100/80 mb-4 bg-slate-50 flex items-center justify-center"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-5 h-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                  ></path>
-                </svg>
+                <img
+                  src="/meyer/mdv/bone-density-analysis.webp"
+                  class="w-full h-full object-cover"
+                  alt="Анализ плотности кости"
+                />
               </div>
               <h3 class="text-base font-bold text-slate-900 mb-2">
                 Анализ плотности кости
@@ -1057,22 +926,13 @@ import "../styles/global.css";
           >
             <div>
               <div
-                class="w-10 h-10 rounded-lg bg-emerald-50 text-[#007457] flex items-center justify-center mb-4"
+                class="w-12 h-12 rounded-xl overflow-hidden border border-slate-100/80 mb-4 bg-slate-50 flex items-center justify-center"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-5 h-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 009 11V5a2 2 0 00-2-2H6a2 2 0 00-2 2v6a13.978 13.978 0 01-2.04 6.96l-.09.054M12 11c0-3.517 1.009-6.799 2.753-9.571m3.44 2.04l-.054.09A13.916 13.916 0 0015 11v6a2 2 0 002 2h1a2 2 0 002-2v-6a13.978 13.978 0 012.04-6.96l.09-.054"
-                  ></path>
-                </svg>
+                <img
+                  src="/meyer/mdv/3d-airway-assessment.webp"
+                  class="w-full h-full object-cover"
+                  alt="3D-оценка дыхательных путей"
+                />
               </div>
               <h3 class="text-base font-bold text-slate-900 mb-2">
                 3D-оценка дыхательных путей
@@ -1090,22 +950,13 @@ import "../styles/global.css";
           >
             <div>
               <div
-                class="w-10 h-10 rounded-lg bg-emerald-50 text-[#007457] flex items-center justify-center mb-4"
+                class="w-12 h-12 rounded-xl overflow-hidden border border-slate-100/80 mb-4 bg-slate-50 flex items-center justify-center"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-5 h-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"
-                  ></path>
-                </svg>
+                <img
+                  src="/meyer/mdv/maxillofacial-integration.png"
+                  class="w-full h-full object-cover"
+                  alt="Челюстно-лицевая интеграция"
+                />
               </div>
               <h3 class="text-base font-bold text-slate-900 mb-2">
                 Челюстно-лицевая интеграция
@@ -1122,22 +973,13 @@ import "../styles/global.css";
           >
             <div>
               <div
-                class="w-10 h-10 rounded-lg bg-emerald-50 text-[#007457] flex items-center justify-center mb-4"
+                class="w-12 h-12 rounded-xl overflow-hidden border border-slate-100/80 mb-4 bg-slate-50 flex items-center justify-center"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-5 h-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"
-                  ></path>
-                </svg>
+                <img
+                  src="/meyer/mdv/nerve-tracing.webp"
+                  class="w-full h-full object-cover"
+                  alt="Трассировка нерва"
+                />
               </div>
               <h3 class="text-base font-bold text-slate-900 mb-2">
                 Трассировка нерва
@@ -1155,26 +997,13 @@ import "../styles/global.css";
           >
             <div>
               <div
-                class="w-10 h-10 rounded-lg bg-emerald-50 text-[#007457] flex items-center justify-center mb-4"
+                class="w-12 h-12 rounded-xl overflow-hidden border border-slate-100/80 mb-4 bg-slate-50 flex items-center justify-center"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-5 h-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                  ></path>
-                </svg>
+                <img
+                  src="/meyer/mdv/virtual-endoscopy.png"
+                  class="w-full h-full object-cover"
+                  alt="Виртуальная эндоскопия"
+                />
               </div>
               <h3 class="text-base font-bold text-slate-900 mb-2">
                 Виртуальная эндоскопия
@@ -1192,22 +1021,13 @@ import "../styles/global.css";
           >
             <div>
               <div
-                class="w-10 h-10 rounded-lg bg-emerald-50 text-[#007457] flex items-center justify-center mb-4"
+                class="w-12 h-12 rounded-xl overflow-hidden border border-slate-100/80 mb-4 bg-slate-50 flex items-center justify-center"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-5 h-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
-                  ></path>
-                </svg>
+                <img
+                  src="/meyer/mdv/root-canal-marking.png"
+                  class="w-full h-full object-cover"
+                  alt="Маркировка корневых каналов"
+                />
               </div>
               <h3 class="text-base font-bold text-slate-900 mb-2">
                 Маркировка корневых каналов
@@ -1225,22 +1045,13 @@ import "../styles/global.css";
           >
             <div>
               <div
-                class="w-10 h-10 rounded-lg bg-emerald-50 text-[#007457] flex items-center justify-center mb-4"
+                class="w-12 h-12 rounded-xl overflow-hidden border border-slate-100/80 mb-4 bg-slate-50 flex items-center justify-center"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-5 h-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
-                  ></path>
-                </svg>
+                <img
+                  src="/meyer/mdv/implantation-simulation.png"
+                  class="w-full h-full object-cover"
+                  alt="Симуляция имплантации"
+                />
               </div>
               <h3 class="text-base font-bold text-slate-900 mb-2">
                 Симуляция имплантации
@@ -1258,22 +1069,13 @@ import "../styles/global.css";
           >
             <div>
               <div
-                class="w-10 h-10 rounded-lg bg-emerald-50 text-[#007457] flex items-center justify-center mb-4"
+                class="w-12 h-12 rounded-xl overflow-hidden border border-slate-100/80 mb-4 bg-slate-50 flex items-center justify-center"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-5 h-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M8 7H5a2 2 0 00-2 2v6a2 2 0 002 2h3m8-10h3a2 2 0 012 2v6a2 2 0 01-2 2h-3"
-                  ></path>
-                </svg>
+                <img
+                  src="/meyer/mdv/auto-generation-2d.png"
+                  class="w-full h-full object-cover"
+                  alt="Авто-генерация 2D"
+                />
               </div>
               <h3 class="text-base font-bold text-slate-900 mb-2">
                 Авто-генерация 2D
@@ -1291,22 +1093,13 @@ import "../styles/global.css";
           >
             <div>
               <div
-                class="w-10 h-10 rounded-lg bg-emerald-50 text-[#007457] flex items-center justify-center mb-4"
+                class="w-12 h-12 rounded-xl overflow-hidden border border-slate-100/80 mb-4 bg-slate-50 flex items-center justify-center"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-5 h-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  ></path>
-                </svg>
+                <img
+                  src="/meyer/mdv/trg-analysis.png"
+                  class="w-full h-full object-cover"
+                  alt="ТРГ-анализ"
+                />
               </div>
               <h3 class="text-base font-bold text-slate-900 mb-2">
                 ТРГ-анализ
@@ -1324,22 +1117,13 @@ import "../styles/global.css";
           >
             <div>
               <div
-                class="w-10 h-10 rounded-lg bg-emerald-50 text-[#007457] flex items-center justify-center mb-4"
+                class="w-12 h-12 rounded-xl overflow-hidden border border-slate-100/80 mb-4 bg-slate-50 flex items-center justify-center"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-5 h-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"
-                  ></path>
-                </svg>
+                <img
+                  src="/meyer/mdv/tmj-detailed-assessment.png"
+                  class="w-full h-full object-cover"
+                  alt="Детальная оценка ВНЧС"
+                />
               </div>
               <h3 class="text-base font-bold text-slate-900 mb-2">
                 Детальная оценка ВНЧС
@@ -1357,27 +1141,13 @@ import "../styles/global.css";
           >
             <div>
               <div
-                class="w-10 h-10 rounded-lg bg-emerald-50 text-[#007457] flex items-center justify-center mb-4"
+                class="w-12 h-12 rounded-xl overflow-hidden border border-slate-100/80 mb-4 bg-slate-50 flex items-center justify-center"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-5 h-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M12.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0019 16V8a1 1 0 00-1.6-.8l-5.334 4z"
-                  ></path>
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M4.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0011 16V8a1 1 0 00-1.6-.8l-5.334 4z"
-                  ></path>
-                </svg>
+                <img
+                  src="/meyer/mdv/arch-segmentation.webp"
+                  class="w-full h-full object-cover"
+                  alt="Сегментация дуги"
+                />
               </div>
               <h3 class="text-base font-bold text-slate-900 mb-2">
                 Сегментация дуги
@@ -1395,22 +1165,13 @@ import "../styles/global.css";
           >
             <div>
               <div
-                class="w-10 h-10 rounded-lg bg-emerald-50 text-[#007457] flex items-center justify-center mb-4"
+                class="w-12 h-12 rounded-xl overflow-hidden border border-slate-100/80 mb-4 bg-slate-50 flex items-center justify-center"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-5 h-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
-                  ></path>
-                </svg>
+                <img
+                  src="/meyer/mdv/smart-positioning-voi.png"
+                  class="w-full h-full object-cover"
+                  alt="Умное позиционирование (VOI)"
+                />
               </div>
               <h3 class="text-base font-bold text-slate-900 mb-2">
                 Умное позиционирование (VOI)
@@ -1420,6 +1181,44 @@ import "../styles/global.css";
                 челюсти.
               </p>
             </div>
+          </div>
+        </div>
+
+        <!-- Дополнительный блок: Проектирование операций и библиотека имплантов (широкая карточка внизу, Пункт 12) -->
+        <div
+          class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-100 shadow-sm flex flex-col md:flex-row items-center gap-8 mt-12"
+        >
+          <div class="md:w-1/2">
+            <span
+              class="text-xs font-bold text-[#007457] uppercase tracking-wider mb-2 block"
+              >Профессиональное планирование</span
+            >
+            <h3 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">
+              Библиотека имплантов и планирование операций
+            </h3>
+            <p class="text-slate-600 leading-relaxed mb-6 font-light">
+              Виртуальное планирование хирургических вмешательств с использованием обширной встроенной библиотеки имплантатов от ведущих мировых производителей. Точный расчет углов наклона, глубины установки и распределения жевательной нагрузки для исключения рисков и осложнений.
+            </p>
+            <div class="flex flex-wrap gap-3 text-xs font-semibold text-slate-500">
+              <span class="bg-slate-50 border border-slate-100 px-3 py-1.5 rounded-lg">
+                Встроенная библиотека имплантов
+              </span>
+              <span class="bg-slate-50 border border-slate-100 px-3 py-1.5 rounded-lg">
+                Контроль жевательной нагрузки
+              </span>
+              <span class="bg-slate-50 border border-slate-100 px-3 py-1.5 rounded-lg">
+                Проектирование хирургических шаблонов
+              </span>
+            </div>
+          </div>
+          <div
+            class="md:w-1/2 w-full rounded-2xl overflow-hidden bg-slate-50 p-2 border border-slate-100"
+          >
+            <img
+              src="/meyer/implants-library.png"
+              class="w-full h-auto object-cover rounded-xl"
+              alt="Библиотека имплантов и планирование операций"
+            />
           </div>
         </div>
       </div>
@@ -1442,153 +1241,165 @@ import "../styles/global.css";
           </h2>
         </div>
 
-        <div class="grid lg:grid-cols-2 gap-12">
-          <!-- Габариты и параметры -->
-          <div>
-            <h3
-              class="text-xl font-bold text-slate-900 mb-6 pb-2 border-b border-slate-100 flex items-center gap-2"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-5 h-5 text-[#007457]"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
-                ></path>
-              </svg>
-              Габариты и параметры
-            </h3>
-            <dl class="space-y-4">
-              <div class="flex justify-between py-2 border-b border-slate-50">
-                <dt class="text-sm font-semibold text-slate-500">
-                  Размеры (Д х Ш х В)
-                </dt>
-                <dd class="text-sm font-bold text-slate-900 text-right">
-                  1065 мм х 1415 мм х 2485 мм (базовый блок)
-                </dd>
-              </div>
-              <div class="flex justify-between py-2 border-b border-slate-50">
-                <dt class="text-sm font-semibold text-slate-500">
-                  Вес аппарата
-                </dt>
-                <dd class="text-sm font-bold text-slate-900 text-right">
-                  220 кг (без цефалостата) / 260 кг (с цефалостатом)
-                </dd>
-              </div>
-              <div class="flex justify-between py-2 border-b border-slate-50">
-                <dt class="text-sm font-semibold text-slate-500">Управление</dt>
-                <dd class="text-sm font-bold text-slate-900 text-right">
-                  Интерактивная сенсорная панель + пульт ДУ
-                </dd>
-              </div>
-              <div class="flex justify-between py-2 border-b border-slate-50">
-                <dt class="text-sm font-semibold text-slate-500">
-                  Позиция пациента
-                </dt>
-                <dd class="text-sm font-bold text-slate-900 text-right">
-                  Стоя/сидя (лоб, подбородок, височные фиксаторы)
-                </dd>
-              </div>
-              <div class="flex justify-between py-2 border-b border-slate-50">
-                <dt class="text-sm font-semibold text-slate-500">
-                  Доступность
-                </dt>
-                <dd class="text-sm font-bold text-slate-900 text-right">
-                  Совместим с инвалидными креслами + Детский режим
-                </dd>
-              </div>
-              <div class="flex justify-between py-2 border-b border-slate-50">
-                <dt class="text-sm font-semibold text-slate-500">
-                  Совместимость ПО
-                </dt>
-                <dd class="text-sm font-bold text-slate-900 text-right">
-                  Windows 10 и выше
-                </dd>
-              </div>
-            </dl>
+        <div class="grid lg:grid-cols-12 gap-12 items-start">
+          <!-- Левая колонка: Изображение со схемой томографа -->
+          <div class="lg:col-span-5 bg-white p-4 rounded-3xl border border-slate-100/60 shadow-sm flex items-center justify-center">
+            <img
+              src="/meyer/sizes.png"
+              class="w-full h-auto object-contain max-h-[500px]"
+              alt="Схема томографа с размерами"
+            />
           </div>
 
-          <!-- Рентгеновские данные -->
-          <div>
-            <h3
-              class="text-xl font-bold text-slate-900 mb-6 pb-2 border-b border-slate-100 flex items-center gap-2"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-5 h-5 text-[#007457]"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
+          <!-- Правая колонка: Характеристики -->
+          <div class="lg:col-span-7 space-y-10">
+            <!-- Габариты и параметры -->
+            <div>
+              <h3
+                class="text-xl font-bold text-slate-900 mb-6 pb-2 border-b border-slate-100 flex items-center gap-2"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
-                ></path>
-              </svg>
-              Рентгеновские данные
-            </h3>
-            <dl class="space-y-4">
-              <div class="flex justify-between py-2 border-b border-slate-50">
-                <dt class="text-sm font-semibold text-slate-500">
-                  Время экспозиции
-                </dt>
-                <dd class="text-sm font-bold text-slate-900 text-right">
-                  КЛКТ: 20 с; Панорама: 17 с; ТРГ/Эндо: 12 с
-                </dd>
-              </div>
-              <div class="flex justify-between py-2 border-b border-slate-50">
-                <dt class="text-sm font-semibold text-slate-500">
-                  Фокальное пятно
-                </dt>
-                <dd class="text-sm font-bold text-slate-900 text-right">
-                  0,5 мм (IEC 60336)
-                </dd>
-              </div>
-              <div class="flex justify-between py-2 border-b border-slate-50">
-                <dt class="text-sm font-semibold text-slate-500">
-                  Глубина цвета
-                </dt>
-                <dd class="text-sm font-bold text-slate-900 text-right">
-                  16 бит (65 536 оттенков серого)
-                </dd>
-              </div>
-              <div class="flex justify-between py-2 border-b border-slate-50">
-                <dt class="text-sm font-semibold text-slate-500">
-                  Параметры излучателя
-                </dt>
-                <dd class="text-sm font-bold text-slate-900 text-right">
-                  Напряжение: 60-90 кВ (шаг 1 кВ) / Ток: 2-10 мА
-                </dd>
-              </div>
-              <div class="flex justify-between py-2 border-b border-slate-50">
-                <dt class="text-sm font-semibold text-slate-500">
-                  Разрешение вокселя (3D)
-                </dt>
-                <dd class="text-sm font-bold text-slate-900 text-right">
-                  70 – 420 мкм
-                </dd>
-              </div>
-              <div class="flex justify-between py-2 border-b border-slate-50">
-                <dt class="text-sm font-semibold text-slate-500">
-                  Время реконструкции 3D
-                </dt>
-                <dd class="text-sm font-bold text-slate-900 text-right">
-                  Менее 1 минуты
-                </dd>
-              </div>
-            </dl>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5 text-[#007457]"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+                  ></path>
+                </svg>
+                Габариты и параметры
+              </h3>
+              <dl class="space-y-4">
+                <div class="flex justify-between py-2 border-b border-slate-50">
+                  <dt class="text-sm font-semibold text-slate-500">
+                    Размеры (Д х Ш х В)
+                  </dt>
+                  <dd class="text-sm font-bold text-slate-900 text-right">
+                    1065 мм х 1415 мм х 2485 мм (базовый блок)
+                  </dd>
+                </div>
+                <div class="flex justify-between py-2 border-b border-slate-50">
+                  <dt class="text-sm font-semibold text-slate-500">
+                    Вес аппарата
+                  </dt>
+                  <dd class="text-sm font-bold text-slate-900 text-right">
+                    220 кг (без цефалостата) / 260 кг (с цефалостатом)
+                  </dd>
+                </div>
+                <div class="flex justify-between py-2 border-b border-slate-50">
+                  <dt class="text-sm font-semibold text-slate-500">Управление</dt>
+                  <dd class="text-sm font-bold text-slate-900 text-right">
+                    Интерактивная сенсорная панель + пульт ДУ
+                  </dd>
+                </div>
+                <div class="flex justify-between py-2 border-b border-slate-50">
+                  <dt class="text-sm font-semibold text-slate-500">
+                    Позиция пациента
+                  </dt>
+                  <dd class="text-sm font-bold text-slate-900 text-right">
+                    Стоя/сидя (лоб, подбородок, височные фиксаторы)
+                  </dd>
+                </div>
+                <div class="flex justify-between py-2 border-b border-slate-50">
+                  <dt class="text-sm font-semibold text-slate-500">
+                    Доступность
+                  </dt>
+                  <dd class="text-sm font-bold text-slate-900 text-right">
+                    Совместим с инвалидными креслами + Детский режим
+                  </dd>
+                </div>
+                <div class="flex justify-between py-2 border-b border-slate-50">
+                  <dt class="text-sm font-semibold text-slate-500">
+                    Совместимость ПО
+                  </dt>
+                  <dd class="text-sm font-bold text-slate-900 text-right">
+                    Windows 10 и выше
+                  </dd>
+                </div>
+              </dl>
+            </div>
+
+            <!-- Рентгеновские данные -->
+            <div>
+              <h3
+                class="text-xl font-bold text-slate-900 mb-6 pb-2 border-b border-slate-100 flex items-center gap-2"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5 text-[#007457]"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                  ></path>
+                </svg>
+                Рентгеновские данные
+              </h3>
+              <dl class="space-y-4">
+                <div class="flex justify-between py-2 border-b border-slate-50">
+                  <dt class="text-sm font-semibold text-slate-500">
+                    Время экспозиции
+                  </dt>
+                  <dd class="text-sm font-bold text-slate-900 text-right">
+                    КЛКТ: 20 с; Панорама: 17 с; ТРГ/Эндо: 12 с
+                  </dd>
+                </div>
+                <div class="flex justify-between py-2 border-b border-slate-50">
+                  <dt class="text-sm font-semibold text-slate-500">
+                    Фокальное пятно
+                  </dt>
+                  <dd class="text-sm font-bold text-slate-900 text-right">
+                    0,5 мм (IEC 60336)
+                  </dd>
+                </div>
+                <div class="flex justify-between py-2 border-b border-slate-50">
+                  <dt class="text-sm font-semibold text-slate-500">
+                    Глубина цвета
+                  </dt>
+                  <dd class="text-sm font-bold text-slate-900 text-right">
+                    16 бит (65 536 оттенков серого)
+                  </dd>
+                </div>
+                <div class="flex justify-between py-2 border-b border-slate-50">
+                  <dt class="text-sm font-semibold text-slate-500">
+                    Параметры излучателя
+                  </dt>
+                  <dd class="text-sm font-bold text-slate-900 text-right">
+                    Напряжение: 60-90 кВ (шаг 1 кВ) / Ток: 2-10 мА
+                  </dd>
+                </div>
+                <div class="flex justify-between py-2 border-b border-slate-50">
+                  <dt class="text-sm font-semibold text-slate-500">
+                    Разрешение вокселя (3D)
+                  </dt>
+                  <dd class="text-sm font-bold text-slate-900 text-right">
+                    70 – 420 мкм
+                  </dd>
+                </div>
+                <div class="flex justify-between py-2 border-b border-slate-50">
+                  <dt class="text-sm font-semibold text-slate-500">
+                    Время реконструкции 3D
+                  </dt>
+                  <dd class="text-sm font-bold text-slate-900 text-right">
+                    Менее 1 минуты
+                  </dd>
+                </div>
+              </dl>
+            </div>
           </div>
         </div>
 
-        <!-- Плашка комплектации -->
+        <!-- Плашка комплектации (Пункт 16) -->
         <div
           class="mt-12 bg-emerald-50/50 p-6 rounded-2xl border border-emerald-100 flex flex-col md:flex-row items-center justify-between gap-6"
         >
@@ -1612,19 +1423,16 @@ import "../styles/global.css";
               </svg>
             </div>
             <div>
-              <h4 class="text-base font-bold text-slate-900">
-                Максимальная базовая комплектация
-              </h4>
-              <p class="text-sm text-slate-600 font-light mt-0.5">
+              <p class="text-sm text-slate-900 font-bold">
                 В каждый комплект уже входит выделенная рабочая станция:
                 Системный блок ПК, монитор, клавиатура и мышь.
               </p>
             </div>
           </div>
           <span
-            class="text-xs bg-[#007457] text-white font-semibold px-4 py-2 rounded-full uppercase tracking-wider whitespace-nowrap"
+            class="text-xs bg-[#007457] text-white font-bold px-4 py-2 rounded-full uppercase tracking-wider whitespace-nowrap"
           >
-            Компьютер включен
+            Выгодно!
           </span>
         </div>
       </div>
@@ -1747,9 +1555,9 @@ import "../styles/global.css";
             >
               Постоянная поддержка после установки:
             </h3>
-            <div class="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+            <div class="flex justify-center max-w-md mx-auto">
               <div
-                class="flex items-center gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100/50"
+                class="flex items-center gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100/50 w-full"
               >
                 <div
                   class="w-10 h-10 rounded-lg bg-red-50 text-red-500 flex items-center justify-center text-lg flex-shrink-0"
@@ -1761,22 +1569,6 @@ import "../styles/global.css";
                   >Доступ к базе знаний и видеоинструкциям</span
                 >
               </div>
-
-              <a
-                href="https://t.me/meyerrussia"
-                target="_blank"
-                class="flex items-center gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100/50 hover:border-[#007457]/30 transition-colors"
-              >
-                <div
-                  class="w-10 h-10 rounded-lg bg-sky-50 text-sky-500 flex items-center justify-center text-lg flex-shrink-0"
-                >
-                  <!-- Иконка Telegram -->
-                  ✈
-                </div>
-                <span class="text-sm text-slate-700 font-semibold"
-                  >Выделенный чат поддержки в Telegram</span
-                >
-              </a>
             </div>
           </div>
 
@@ -1851,8 +1643,7 @@ import "../styles/global.css";
               <p
                 class="text-sm sm:text-base text-slate-600 leading-relaxed font-light"
               >
-                Доставка до терминала транспортной компании в вашем городе
-                осуществляется бесплатно. Профессиональная сборка, настройка и
+                Доставка транспортной компанией в ваш город осуществляется бесплатно. Профессиональная сборка, настройка и
                 запуск оборудования инженерами непосредственно в вашей клинике —
                 наш подарок!
               </p>
@@ -1913,33 +1704,6 @@ import "../styles/global.css";
             </div>
           </details>
 
-          <!-- Вопрос 5 -->
-          <details
-            class="group bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden [&_summary::-webkit-details-marker]:hidden transition-all duration-300"
-          >
-            <summary
-              class="flex items-center justify-between p-6 cursor-pointer select-none"
-            >
-              <h3 class="text-base sm:text-lg font-bold text-slate-900 pr-4">
-                Можно ли купить аппарат без цефалостата, а потом его установить?
-              </h3>
-              <span
-                class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-slate-800 font-bold shadow-sm transition-transform duration-300 group-open:rotate-45"
-                >＋</span
-              >
-            </summary>
-            <div class="px-6 pb-6 pt-2 border-t border-slate-100/60 bg-white">
-              <p
-                class="text-sm sm:text-base text-slate-600 leading-relaxed font-light"
-              >
-                Да, вы можете приобрести базовую 3D-модель томографа, а
-                цефалостат (плечо CEPH) заказать и смонтировать позже в любое
-                время. Конструкция томографа полностью подготовлена для быстрого
-                дооснащения непосредственно в вашей клинике.
-              </p>
-            </div>
-          </details>
-
           <!-- Вопрос 6 -->
           <details
             class="group bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden [&_summary::-webkit-details-marker]:hidden transition-all duration-300"
@@ -1963,6 +1727,30 @@ import "../styles/global.css";
                 размещения, рассчитать радиационную защиту (расчет свинцового
                 эквивалента) и собрать необходимый пакет документов для
                 прохождения санэпидэкспертизы в Роспотребнадзоре.
+              </p>
+            </div>
+          </details>
+
+          <!-- Вопрос 7 (Пункт 20) -->
+          <details
+            class="group bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden [&_summary::-webkit-details-marker]:hidden transition-all duration-300"
+          >
+            <summary
+              class="flex items-center justify-between p-6 cursor-pointer select-none"
+            >
+              <h3 class="text-base sm:text-lg font-bold text-slate-900 pr-4">
+                Доступна ли покупка оборудования в лизинг?
+              </h3>
+              <span
+                class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-slate-800 font-bold shadow-sm transition-transform duration-300 group-open:rotate-45"
+                >＋</span
+              >
+            </summary>
+            <div class="px-6 pb-6 pt-2 border-t border-slate-100/60 bg-white">
+              <p
+                class="text-sm sm:text-base text-slate-600 leading-relaxed font-light"
+              >
+                Да, мы активно работаем с ведущими лизинговыми компаниями России. Лизинг для юридических лиц и индивидуальных предпринимателей является отличным финансовым инструментом: он позволяет обновить парк оборудования с минимальным первоначальным взносом, сохранить оборотные средства и получить налоговые преференции (амортизация, уменьшение налога на прибыль и зачет НДС).
               </p>
             </div>
           </details>
@@ -1995,7 +1783,7 @@ import "../styles/global.css";
                 class="relative w-full max-w-sm aspect-square bg-slate-900/50 rounded-2xl border border-slate-700/50 p-6 flex items-center justify-center"
               >
                 <img
-                  src="./tomograf.jpg"
+                  src="/meyer/tomograf.jpg"
                   class="w-full h-auto object-contain max-h-[90%] rounded-xl"
                   alt="Томограф Meyer на темном фоне"
                 />
@@ -2016,8 +1804,7 @@ import "../styles/global.css";
               </h2>
               <p class="text-slate-300 leading-relaxed font-light mb-8">
                 Оставьте заявку, и мы подготовим для вас индивидуальное
-                коммерческое предложение на томограф Meyer, рассчитаем логистику
-                и ответим на все вопросы по интеграции в вашу клинику.
+                коммерческое предложение на томограф Meyer и ответим на все вопросы по интеграции в вашу клинику.
               </p>
 
               <form
@@ -2061,10 +1848,13 @@ import "../styles/global.css";
                   Получить расчет
                 </button>
                 <p
-                  class="text-[10px] text-slate-500 text-center mt-3 font-light"
+                  class="text-[10px] text-slate-500 text-center mt-3 font-light leading-relaxed"
                 >
-                  Нажимая на кнопку, вы соглашаетесь на обработку персональных
-                  данных в соответствии с политикой конфиденциальности.
+                  Нажимая на кнопку, вы <span class="relative group/policy cursor-help underline decoration-slate-600">соглашаетесь<!-- Всплывашка при наведении -->
+                    <span class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover/policy:block w-64 bg-slate-800 text-slate-200 text-[11px] p-3 rounded-lg border border-slate-700 shadow-2xl z-50 pointer-events-auto text-left leading-relaxed">
+                      Нажимая кнопку, вы подтверждаете согласие с <a href="#" class="text-emerald-400 hover:text-emerald-300 underline font-semibold transition-colors">Политикой конфиденциальности</a> и <a href="#" class="text-emerald-400 hover:text-emerald-300 underline font-semibold transition-colors">Политикой использования файлов Cookie</a>.
+                    </span>
+                  </span> на обработку персональных данных в соответствии с политикой конфиденциальности.
                 </p>
               </form>
             </div>
@@ -2188,9 +1978,9 @@ import "../styles/global.css";
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid md:grid-cols-2 lg:grid-cols-12 gap-12 mb-12">
           <!-- Описание и контакты (слева) -->
-          <div class="lg:col-span-4 flex flex-col gap-4">
+          <div class="lg:col-span-3 flex flex-col gap-4">
             <div class="flex items-center gap-2">
-              <img src="./logo-white.svg" alt="Meyer" class="h-8 w-auto" />
+              <img src="/meyer/logo-white.svg" alt="Meyer" class="h-8 w-auto" />
             </div>
             <p class="text-sm text-slate-400 leading-relaxed font-light">
               Официальное представительство стоматологического рентгеновского
@@ -2204,7 +1994,7 @@ import "../styles/global.css";
                 class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-[#007457] text-white flex items-center justify-center transition-colors shadow-sm"
                 aria-label="VK"
               >
-                VK
+                <img src="/meyer/ri--vk-fill.svg" class="w-5 h-5" alt="VK" />
               </a>
               <!-- Telegram -->
               <a
@@ -2213,7 +2003,7 @@ import "../styles/global.css";
                 class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-[#007457] text-white flex items-center justify-center transition-colors shadow-sm"
                 aria-label="Telegram"
               >
-                TG
+                <img src="/meyer/ri--telegram-fill.svg" class="w-5 h-5" alt="Telegram" />
               </a>
               <!-- WhatsApp -->
               <a
@@ -2222,13 +2012,13 @@ import "../styles/global.css";
                 class="w-10 h-10 rounded-lg bg-slate-800 hover:bg-[#007457] text-white flex items-center justify-center transition-colors shadow-sm"
                 aria-label="WhatsApp"
               >
-                WA
+                <img src="/meyer/ri--whatsapp-fill.svg" class="w-5 h-5" alt="WhatsApp" />
               </a>
             </div>
           </div>
 
           <!-- Навигация -->
-          <div class="lg:col-span-2.5">
+          <div class="lg:col-span-2">
             <h4
               class="text-xs font-bold text-white uppercase tracking-wider mb-4"
             >
@@ -2267,7 +2057,7 @@ import "../styles/global.css";
           </div>
 
           <!-- Адрес и график -->
-          <div class="lg:col-span-3">
+          <div class="lg:col-span-4">
             <h4
               class="text-xs font-bold text-white uppercase tracking-wider mb-4"
             >
@@ -2291,7 +2081,7 @@ import "../styles/global.css";
           </div>
 
           <!-- Контакты -->
-          <div class="lg:col-span-2.5">
+          <div class="lg:col-span-3">
             <h4
               class="text-xs font-bold text-white uppercase tracking-wider mb-4"
             >
@@ -2301,7 +2091,7 @@ import "../styles/global.css";
               <li>
                 <a
                   href="tel:+79090272037"
-                  class="hover:text-white transition-colors flex items-center gap-2 font-semibold"
+                  class="hover:text-white transition-colors flex items-center gap-2 font-semibold whitespace-nowrap"
                 >
                   <span class="text-[#007457]">📞</span>
                   <span>+7 (909) 027-20-37</span>
@@ -2326,12 +2116,13 @@ import "../styles/global.css";
         >
           <div class="flex items-center gap-6 flex-wrap justify-center">
             <a
-              href="#"
+              href="/meyer/meyer.pdf"
+              download
               class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold px-4 py-2.5 rounded-lg border border-slate-700 transition-colors"
             >
               <!-- Иконка PDF -->
               <span>📄</span>
-              <span>Скачать брошюру (PDF)</span>
+              <span>Скачать журнал</span>
             </a>
           </div>
 
